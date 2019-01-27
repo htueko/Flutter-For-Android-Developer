@@ -1,0 +1,44 @@
+Flutter for Android Developer
+
+Hello World
+
+```flutter
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: myTheme,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Hello Flutter"),
+        ),
+        body: Center(
+          child: Text("Hello World!", style: TextStyle(
+            color: myTheme.accentColor,
+          ),),
+        ),
+      ),
+    );
+  }
+}
+
+var myTheme = ThemeData(
+    primaryColor: Color(0xFF008577),
+    primaryColorDark: Color(0xFF00574B),
+    accentColor: Color(0xFFD81B60));
+```
+
+-> AppBar() is like Toolbar in android
+
+-> Scaffold() is like the combination of 
+Toolbar(AppBar), ViewGroup(body), DrawerLayout(Drawer) and BottomNavigationView(BottomNavigationBar) and a lot I haven't figure out yet!
+
+-> Center() widget center the child widget (here is likes constraint to start, end, top and bottom)
+
+-> Text() is like a TextView
+
+-> ThemeData() is like Themeing our android app (here I assign android default colors)
